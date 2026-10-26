@@ -1,0 +1,33 @@
+# Google Calendar -> aTimeLogger local sync
+# Google Calendar 设置 -> 课程表日历 -> 集成日历 -> 私密地址（iCal 格式）
+GOOGLE_CALENDAR_ICS_URL=https://calendar.google.com/calendar/ical/your-private-calendar/basic.ics
+SYNC_TIMEZONE=Asia/Shanghai
+ATIMELOGGER_BASE_URL=https://app.atimelogger.pro
+# 如果这里填的是分组名，脚本会自动使用该分组下第一个可写活动。
+ATIMELOGGER_ACTIVITY_TYPE_NAME=工作
+# 推荐长期使用：填写 aTimeLogger 登录账号和密码，由脚本运行时获取临时 token
+ATIMELOGGER_USERNAME=your-atimelogger-username
+ATIMELOGGER_PASSWORD=your-atimelogger-password
+# 可选：也可以使用登录 token；配置后会优先于账号密码
+# ATIMELOGGER_TOKEN=your-atimelogger-bearer-token
+# 可选：先 dry-run 测试，不写入 aTimeLogger
+ATIMELOGGER_DRY_RUN=true
+
+# Toggl <-> aTimeLogger bidirectional sync
+# 推荐使用 Toggl API token；也可以改用 TOGGL_USERNAME + TOGGL_PASSWORD
+TOGGL_API_TOKEN=your-toggl-api-token
+# TOGGL_USERNAME=your-toggl-account
+# TOGGL_PASSWORD=your-toggl-password
+# 留空时会自动读取 Toggl 默认工作区
+# TOGGL_WORKSPACE_ID=1234567
+TOGGL_ATIMELOGGER_DIRECTION=both
+TOGGL_ATIMELOGGER_ACTIVITY_TYPE_NAME=工作
+# 留空表示所有 aTimeLogger 活动类型都可以导出到 Toggl
+# ATIMELOGGER_TO_TOGGL_TYPE_NAMES=授课,备课
+TOGGL_INCLUDE_GOOGLE_CALENDAR=false
+# all / exclude-calendar / manual-only
+TOGGL_SOURCE_FILTER=exclude-calendar
+TOGGL_CALENDAR_SOURCE_KEYWORDS=calendar,google calendar,outlook,ical
+# none / exact / title-overlap
+TOGGL_DUPLICATE_POLICY=exact
+TOGGL_ATIMELOGGER_DRY_RUN=true

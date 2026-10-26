@@ -1,0 +1,17 @@
+{
+  "name": "atimelogger-toggl-sync-v2",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "sync": "node scripts/sync-google-calendar-to-atimelogger.mjs",
+    "sync:dry-run": "node scripts/sync-google-calendar-to-atimelogger.mjs --dry-run",
+    "sync:atimelogger-calendar": "node scripts/sync-google-calendar-to-atimelogger.mjs",
+    "sync:toggl-atimelogger": "node scripts/sync-toggl-atimelogger.mjs",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "luxon": "^3.7.2",
+    "node-ical": "^0.26.1"
+  }
+}

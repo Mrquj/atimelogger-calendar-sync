@@ -1,0 +1,25 @@
+node_modules/
+.dev.vars
+.env
+.atimelogger-calendars.json
+.atimelogger-sync-settings.json
+.toggl-atimelogger-config.json
+.toggl-atimelogger-state.json
+logs/
+*.log
+__pycache__/
+# --- added for GitHub publish ---
+*.zip
+*.bak
+*.bak.*
+*.bak-*
+__pycache__/
+.wrangler/
+dist/
+coverage/
+.dev.vars
+.env
+.atimelogger-calendars.json
+.atimelogger-sync-settings.json
+.toggl-atimelogger-config.json
+.toggl-atimelogger-state.json
